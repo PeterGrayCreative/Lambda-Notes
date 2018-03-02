@@ -1,3 +1,3 @@
 ## MVP Lambda Notes
 
-Deployed at (https://dazzling-wing-626010.netlify.com/)
+Deployed at (http://friendly-roentgen-b3619b.netlify.com)
