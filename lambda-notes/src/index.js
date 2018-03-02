@@ -6,6 +6,9 @@ import { rootReducer } from './reducers/reducer';
 import logger from 'redux-logger';
 import App from './containers/App';
 import { loadState, saveState } from './localStorage';
+import WebFont from 'webfontloader';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
 // import registerServiceWorker from './registerServiceWorker';
 
 const persistedState = loadState();
@@ -27,3 +30,8 @@ ReactDOM.render(
   document.getElementById('root')
 );
 // registerServiceWorker();
+WebFont.load({
+  google: {
+    families: ['Raleway:400', 'Roboto:700', 'sans-serif']
+  }
+});
