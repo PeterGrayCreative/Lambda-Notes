@@ -15,7 +15,7 @@ const initialState = {
   searching: false,
 };
 
-export const rootReducer = (state = initialState, action) => {
+export const noteReducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.ADDNOTE:
       return {

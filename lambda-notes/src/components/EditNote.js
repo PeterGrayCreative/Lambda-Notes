@@ -56,13 +56,14 @@ class EditNote extends Component {
   }
 }
 const mapStateToProps = state => {
+  const { noteReducer } = state;
   return {
-    notes: state.notes,
-    currentNote: state.currentNote.reduce((obj, note) => {
+    notes: noteReducer.notes,
+    currentNote: noteReducer.currentNote.reduce((obj, note) => {
       obj = note;
       return obj;
     }, {}),
-    error: state.error,
+    error: noteReducer.error,
   };
 };
 export default connect(mapStateToProps, { getNote, updateNote })(EditNote);

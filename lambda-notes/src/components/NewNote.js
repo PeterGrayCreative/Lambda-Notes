@@ -82,10 +82,11 @@ class NewNote extends Component {
   }
 }
 const mapStateToProps = state => {
+  const { noteReducer } = state;
   return {
-    addingNote: state.addingNote,
-    notes: state.notes,
-    error: state.error,
+    addingNote: noteReducer.addingNote,
+    notes: noteReducer.notes,
+    error: noteReducer.error,
   };
 };
 

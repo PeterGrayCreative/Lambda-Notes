@@ -31,9 +31,10 @@ class Search extends Component {
 }
 
 const mapStateToProps = state => {
+  const { noteReducer } = state;
   return {
-    searchText: state.searchText,
-    error: state.error,
+    searchText: noteReducer.searchText,
+    error: noteReducer.error,
   };
 };
 

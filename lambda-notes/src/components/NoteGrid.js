@@ -37,11 +37,12 @@ class NoteGrid extends Component {
 }
 
 const mapStateToProps = state => {
+  const { noteReducer } = state;
   return {
-    notes: state.filteredNotes.length > 0 ? state.filteredNotes : state.notes,
-    filteredNotes: state.filteredNotes,
-    searching: state.searching,
-    error: state.error,
+    notes: noteReducer.filteredNotes.length > 0 ? noteReducer.filteredNotes : noteReducer.notes,
+    filteredNotes: noteReducer.filteredNotes,
+    searching: noteReducer.searching,
+    error: noteReducer.error,
   };
 };
 

@@ -91,9 +91,10 @@ class NoteFull extends Component {
 }
 Modal.setAppElement('#root');
 const mapStateToProps = state => {
+  const { noteReducer } = state;
   return {
-    error: state.error,
-    currentNote: state.currentNote,
+    error: noteReducer.error,
+    currentNote: noteReducer.currentNote,
   };
 };
 
